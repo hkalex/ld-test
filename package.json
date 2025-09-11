@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "hono": "4.8.2",
+    "launchdarkly-react-client-sdk": "^3.8.1",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
