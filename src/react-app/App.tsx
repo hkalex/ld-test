@@ -1,18 +1,24 @@
 // src/App.tsx
 
 import { useState } from "react";
+
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import cloudflareLogo from "./assets/Cloudflare_Logo.svg";
 import honoLogo from "./assets/hono.svg";
 import "./App.css";
 
+import { useFlags } from "launchdarkly-react-client-sdk";
+
 function App() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState("unknown");
 
+  const { testFeature } = useFlags();
+
   return (
     <>
+      <div>testFeature is { testFeature ? 'true' : 'false'}</div>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
