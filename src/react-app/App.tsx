@@ -2,24 +2,28 @@
 
 import { useState } from "react";
 
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import cloudflareLogo from "./assets/Cloudflare_Logo.svg";
-import honoLogo from "./assets/hono.svg";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
+// import cloudflareLogo from "./assets/Cloudflare_Logo.svg";
+// import honoLogo from "./assets/hono.svg";
 import "./App.css";
 
 import { useFlags } from "launchdarkly-react-client-sdk";
 
+import About from "./About"
+
 function App() {
-  const [count, setCount] = useState(0);
-  const [name, setName] = useState("unknown");
+  // const [count, setCount] = useState(0);
+  // const [name, setName] = useState("unknown");
+  // const [username, setUsername] = useState("username")
 
   const { testFeature } = useFlags();
 
   return (
     <>
-      <div>testFeature is { testFeature ? 'true' : 'false'}</div>
-      <div>
+      <div>In App.tsx, testFeature is { testFeature ? 'true' : 'false'}</div>
+      <About />
+      {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -64,7 +68,7 @@ function App() {
           Edit <code>worker/index.ts</code> to change the name
         </p>
       </div>
-      <p className="read-the-docs">Click on the logos to learn more</p>
+      <p className="read-the-docs">Click on the logos to learn more</p> */}
     </>
   );
 }
