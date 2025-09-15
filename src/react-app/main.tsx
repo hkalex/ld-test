@@ -6,12 +6,11 @@ import App from "./App.tsx";
 
 const LD_CLIENT_ID = "68c2546fae804509aa5aa699";
 
-const [username, setUsername] = useState("username")
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <LDProvider clientSideID={LD_CLIENT_ID}>
-      <App setUsername />
+      <App />
     </LDProvider>
   </StrictMode>,
 );
