@@ -11,6 +11,10 @@ import "./App.css";
 import { useFlags } from "launchdarkly-react-client-sdk";
 
 import About from "./About"
+import About1 from "./About1"
+import About2 from "./About2"
+import About3 from "./About3"
+
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -23,6 +27,9 @@ function App() {
     <>
       <div>In App.tsx, testFeature is { testFeature ? 'true' : 'false'}</div>
       <About />
+      <About1 />
+      <About2 />
+      <About3 />
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
